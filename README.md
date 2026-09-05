@@ -61,13 +61,8 @@ The design keeps the language model doing what it is good at — grounding named
 objects in an image — and moves the metric decision, which it is bad at, into
 deterministic code you can inspect and unit-test.
 
-```
-reference shots ──▶ keypoint annotation ──▶ normality graph ──┐
-                                                              ├──▶ prompt ──▶ VLM ──▶ JSON
-query image ──────────────────────────────────────────────────┘                        │
-                                                                                        ▼
-                                          score + defect coordinates ◀── geometric audit
-```
+<img width="1748" height="494" alt="image" src="https://github.com/user-attachments/assets/09fe09d0-9064-471e-a7be-be1f0cf5425e" />
+
 
 **Using PyCharm? Start with [`PYCHARM_SETUP.md`](PYCHARM_SETUP.md).**
 **Otherwise follow [`RUNBOOK.md`](RUNBOOK.md) step by step.**
