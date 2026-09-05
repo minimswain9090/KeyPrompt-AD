@@ -89,21 +89,8 @@ Free API options, all usable for a full benchmark run:
 
 ## Data
 
-Download MVTec LOCO AD from MVTec (free for research; CC BY-NC-SA 4.0) and
-extract so the tree looks like:
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/d9cc1a81-309d-440b-be12-fd157e3206d4" />
 
-```
-data/mvtec_loco_anomaly_detection/
-  pushpins/
-    train/good/            validation/good/
-    test/good/             test/logical_anomalies/     test/structural_anomalies/
-    ground_truth/logical_anomalies/<stem>/000.png ...
-    defects_config.json
-  screw_bag/  splicing_connectors/  breakfast_box/  juice_bottle/
-```
-
-Start with `pushpins` and `screw_bag`. Both are close analogues of the
-missing-nut and component-count problems this method was designed for.
 
 ## Usage
 
