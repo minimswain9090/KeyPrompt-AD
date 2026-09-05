@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "keyprompt-ad"
+version = "0.1.0"
+description = "Keypoint-grounded few-shot logical anomaly detection with vision-language models"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+  "numpy>=1.26", "scipy>=1.11", "Pillow>=10.0", "PyYAML>=6.0",
+  "requests>=2.31", "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+gemini = ["google-genai>=0.3.0"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+keyprompt = "keyprompt.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

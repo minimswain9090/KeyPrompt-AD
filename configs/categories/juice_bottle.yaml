@@ -1,0 +1,23 @@
+name: juice_bottle
+component_classes:
+  - fill_level
+  - top_label
+  - bottom_label
+normality_statement: |
+  A correct part is a glass bottle filled to a fixed level with juice, carrying
+  one label near the top of the bottle and one near the bottom. The icon on the
+  bottom label matches the juice type, and the top label carries the product
+  banner.
+
+  The part is defective when the fill level is too high or too low, when either
+  label is missing, when the labels are swapped, when a label is damaged or
+  misplaced, or when the icon does not match the juice colour.
+grouping_description: |
+  Report the fill level as a single point at the centre of the liquid surface,
+  and each label as a point at its centre. The vertical distance between the
+  fill point and the two label points is the quantity that identifies an
+  incorrect fill.
+ignored_variation:
+  - reflections and highlights on the glass
+  - small differences in background brightness
+  - minor variation in juice shade

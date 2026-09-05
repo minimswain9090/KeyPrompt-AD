@@ -1,0 +1,12 @@
+# Cross-model check on an open-weight VLM, to show the method is not tied to
+# one proprietary backend.
+dataset_root: data/mvtec_loco_anomaly_detection
+output_root: runs/qwen25vl-4shot
+categories: [pushpins, screw_bag, splicing_connectors, breakfast_box, juice_bottle]
+provider:
+  name: openrouter
+  model: qwen/qwen2.5-vl-72b-instruct:free
+  api_key_env: OPENROUTER_API_KEY
+  min_seconds_between_calls: 6.0
+image: {max_side: 512}
+prior: {n_shots: 4}

@@ -1,0 +1,45 @@
+# Single-category study: pushpins.
+#
+# Pushpins is the category whose structure the method targets most directly —
+# a fixed grid of compartments with one pin each, so slot occupancy and spacing
+# both carry signal. Scoping to it keeps the claim matched to the evidence.
+
+dataset_root: data/mvtec_loco_anomaly_detection
+output_root: runs/pushpins_study
+annotations_root: annotations
+cache_root: .cache/vlm
+categories:
+  - pushpins
+seed: 0
+limit_per_split: null
+use_cache: true
+
+provider:
+  name: gemini
+  model: gemini-3.6-flash
+  api_key_env: GEMINI_API_KEY
+  temperature: 0.0
+  max_output_tokens: 8192
+  max_retries: 4
+  retry_base_delay: 4.0
+  min_seconds_between_calls: 4.0
+  timeout: 120.0
+
+image:
+  max_side: 512
+  keep_aspect: true
+  jpeg_quality: 90
+
+prior:
+  n_shots: 4
+  align: true
+  min_sigma: 0.07
+
+scoring:
+  match_radius: 0.10
+  w_missing: 1.0
+  w_extra: 0.5
+  w_displacement: 1.0
+  w_edge: 0.8
+  w_vlm: 0.6
+  sigma_clip: 6.0

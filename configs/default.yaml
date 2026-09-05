@@ -1,0 +1,45 @@
+# Default benchmark configuration.
+# Every reported number should be traceable to one of these files plus a commit.
+
+dataset_root: data/mvtec_loco_anomaly_detection
+output_root: runs/gemini-flash-4shot
+cache_root: .cache/vlm
+categories:
+  - pushpins
+  - screw_bag
+  - splicing_connectors
+  - breakfast_box
+  - juice_bottle
+seed: 0
+limit_per_split: null      # set to e.g. 5 for a smoke test
+use_cache: true
+
+provider:
+  name: gemini             # gemini | openrouter | groq | echo
+  model: gemini-2.0-flash
+  api_key_env: GEMINI_API_KEY
+  temperature: 0.0
+  max_output_tokens: 2048
+  max_retries: 4
+  retry_base_delay: 4.0
+  min_seconds_between_calls: 4.0   # free tier is roughly 15 requests/minute
+  timeout: 120.0
+
+image:
+  max_side: 512            # ablated in the paper: 256 / 384 / 512 / 768
+  keep_aspect: true
+  jpeg_quality: 90
+
+prior:
+  n_shots: 4               # ablated: 1 / 2 / 4 / 8
+  align: true
+  min_sigma: 0.012
+
+scoring:
+  match_radius: 0.10
+  w_missing: 1.0
+  w_extra: 0.5
+  w_displacement: 1.0
+  w_edge: 0.8
+  w_vlm: 0.6
+  sigma_clip: 6.0

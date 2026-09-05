@@ -1,0 +1,16 @@
+# Offline smoke test: no API key, no network, 3 images per subset.
+# Verifies the plumbing end to end before spending quota.
+dataset_root: data/mvtec_loco_anomaly_detection
+output_root: runs/smoke
+cache_root: .cache/vlm
+categories: [pushpins]
+seed: 0
+limit_per_split: 3
+use_cache: false
+provider:
+  name: echo
+  model: offline-stub
+  api_key_env: NONE
+  min_seconds_between_calls: 0.0
+image: {max_side: 256}
+prior: {n_shots: 4}

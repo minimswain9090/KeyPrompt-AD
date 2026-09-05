@@ -1,0 +1,23 @@
+name: splicing_connectors
+component_classes:
+  - connector_terminal
+  - cable_end
+normality_statement: |
+  A correct part is two identical splicing connector blocks joined by a single
+  cable. Both blocks have the same number of terminals, the cable is connected
+  to the mirrored terminal position on each block, and the cable colour
+  corresponds to the block size according to a fixed convention.
+
+  The part is defective when the two blocks have different terminal counts,
+  when the cable is missing, when an extra cable is present, when the cable
+  attaches at mismatched terminal positions, or when the cable colour does not
+  match the block size.
+grouping_description: |
+  Treat each connector block as a group of terminal slots, and treat the cable
+  as an edge linking one terminal on the left block to one on the right. The
+  two endpoints of that edge must occupy mirrored positions within their
+  respective blocks.
+ignored_variation:
+  - the exact curvature or slack of the cable between the two blocks
+  - small rotations of the whole assembly on the background
+  - dust and marks on the background surface

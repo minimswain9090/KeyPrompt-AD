@@ -1,0 +1,25 @@
+name: breakfast_box
+component_classes:
+  - orange
+  - nectarine
+  - cereal_region
+  - banana_chip_region
+  - almond_region
+normality_statement: |
+  A correct part is a rectangular box split into two compartments. The left
+  compartment holds exactly two tangerines and one nectarine. The right
+  compartment holds cereal, topped with banana chips and almonds in a roughly
+  fixed ratio, covering the compartment evenly.
+
+  The part is defective when fruit is missing, duplicated, or of the wrong
+  type; when fruit appears in the wrong compartment; or when the proportion of
+  cereal to banana chips and almonds departs clearly from the reference.
+grouping_description: |
+  The left compartment is a group of three fruit slots at fixed positions. The
+  right compartment is treated as a single region: report the approximate
+  centre of the cereal area, of the banana chip cluster, and of the almond
+  cluster, rather than counting individual pieces.
+ignored_variation:
+  - the exact rotation of an individual piece of fruit
+  - small differences in fruit size or surface colour
+  - the fine-grained arrangement of individual cereal flakes

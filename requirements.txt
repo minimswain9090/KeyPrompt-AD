@@ -1,0 +1,13 @@
+# core
+numpy>=1.26
+scipy>=1.11
+Pillow>=10.0
+PyYAML>=6.0
+requests>=2.31
+matplotlib>=3.8
+
+# gemini backend (optional; only needed for provider.name = gemini)
+google-genai>=0.3.0
+
+# dev
+pytest>=8.0

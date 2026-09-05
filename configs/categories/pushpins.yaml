@@ -1,0 +1,21 @@
+name: pushpins
+component_classes:
+  - pushpin
+normality_statement: |
+  A correct part is a rectangular plastic tray divided into a regular grid of
+  identical rectangular compartments. Exactly one pushpin sits inside every
+  compartment. Pushpin colour and the exact angle at which a pin rests are not
+  controlled and vary freely between correct parts.
+
+  The part is defective when a compartment holds no pushpin, when a compartment
+  holds more than one, or when a pin sits outside the compartment boundaries.
+grouping_description: |
+  Compartments are treated as slots arranged in fixed rows and columns. Each
+  pushpin belongs to exactly one slot, and the slot layout is identical across
+  every image because the tray is photographed in a fixed position. The spacing
+  between neighbouring pins is therefore near-constant on a correct part.
+ignored_variation:
+  - variation in pushpin colour
+  - the angle or orientation of an individual pin within its compartment
+  - shadows, reflections and highlights on the plastic tray
+  - dust, scratches or scuffs on the tray surface

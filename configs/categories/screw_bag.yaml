@@ -1,0 +1,23 @@
+name: screw_bag
+component_classes:
+  - long_screw
+  - short_screw
+  - nut
+  - washer
+normality_statement: |
+  A correct part is a transparent plastic bag containing exactly two long
+  screws, two short screws, two hexagonal nuts and two washers. The items rest
+  loosely, so their positions shift between images, but the bill of materials
+  never changes.
+
+  The part is defective when the count of any item type is wrong, when a screw
+  of the wrong length is present, or when an item type is absent entirely.
+grouping_description: |
+  Because the contents are loose, position is only weakly informative here and
+  the count of each component type carries most of the signal. Report every
+  item you can see, with its class, and be careful to distinguish long screws
+  from short ones by comparing shank length against the nuts beside them.
+ignored_variation:
+  - the position and rotation of items inside the bag
+  - creases, folds and reflections in the plastic
+  - the exact position of the printed label
