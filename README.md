@@ -64,10 +64,6 @@ deterministic code you can inspect and unit-test.
 <img width="1748" height="494" alt="image" src="https://github.com/user-attachments/assets/09fe09d0-9064-471e-a7be-be1f0cf5425e" />
 
 
-**Using PyCharm? Start with [`PYCHARM_SETUP.md`](PYCHARM_SETUP.md).**
-**Otherwise follow [`RUNBOOK.md`](RUNBOOK.md) step by step.**
-The complete source listing is in [`FULL_CODE.md`](FULL_CODE.md).
-
 ## Install
 
 ```bash
