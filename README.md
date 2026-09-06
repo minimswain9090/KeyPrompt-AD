@@ -87,11 +87,6 @@ Free API options, all usable for a full benchmark run:
 | Groq | `provider.name: groq` | Lowest latency; good for the throughput argument. |
 | — | `provider.name: echo` | Offline stub, no key needed. For smoke tests and CI. |
 
-## Data
-
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/d9cc1a81-309d-440b-be12-fd157e3206d4" />
-
-
 ## Usage
 
 ```bash
